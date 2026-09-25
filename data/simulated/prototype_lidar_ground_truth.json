@@ -1,0 +1,62 @@
+{
+  "dataset_name": "prototype_tower_a.las",
+  "synthetic": true,
+  "crs": 32644,
+  "random_seed": 42,
+  "point_count": 19502,
+  "building_id": "TOWER-A",
+  "parcel_ulpin_2d": "27A8B9C3D4E5F6",
+  "spatial_extent": {
+    "min_x": 219394.95514344756,
+    "max_x": 219435.0331475218,
+    "min_y": 1932494.9654929147,
+    "max_y": 1932525.4358846373,
+    "min_z": 539.9270317434957,
+    "max_z": 549.5507887924753
+  },
+  "building_footprint_bounds": {
+    "min_x": 219405.0,
+    "max_x": 219425.0,
+    "min_y": 1932502.5,
+    "max_y": 1932517.5,
+    "area_sqm": 300.0
+  },
+  "ground_z": 540.0,
+  "roof_z": 549.5,
+  "building_height_above_ground_m": 9.5,
+  "expected_floor_count": 3,
+  "floor_boundaries": [
+    540.0,
+    543.5,
+    546.5,
+    549.5
+  ],
+  "floor_intervals": [
+    {
+      "floor_code": "F00",
+      "z_min": 540.0,
+      "z_max": 543.5,
+      "delta_z": 3.5
+    },
+    {
+      "floor_code": "F01",
+      "z_min": 543.5,
+      "z_max": 546.5,
+      "delta_z": 3.0
+    },
+    {
+      "floor_code": "F02",
+      "z_min": 546.5,
+      "z_max": 549.5,
+      "delta_z": 3.0
+    }
+  ],
+  "classifications": {
+    "2_ground_count": 1514,
+    "6_building_count": 17988
+  },
+  "synthetic_perturbation": {
+    "type": "Gaussian",
+    "sigma_m": 0.02
+  }
+}

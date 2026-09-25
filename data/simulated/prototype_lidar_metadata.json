@@ -1,0 +1,21 @@
+{
+  "dataset_name": "SYN_TECH_CITY_UAV_LIDAR_2026.las",
+  "format": "ASPRS LAS 1.4",
+  "point_count": 284500,
+  "crs_epsg": 32644,
+  "vertical_datum": "MSL_EGM2008",
+  "bounding_box_3d": {
+    "min_x": 219390.0,
+    "max_x": 219440.0,
+    "min_y": 1932490.0,
+    "max_y": 1932530.0,
+    "min_z": 530.0,
+    "max_z": 565.0
+  },
+  "classification_codes": {
+    "2": "Ground",
+    "6": "Building",
+    "9": "Water"
+  },
+  "pipeline_status": "PENDING_AI_SEGMENTATION_PIPELINE"
+}

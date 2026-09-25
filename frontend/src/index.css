@@ -1,0 +1,192 @@
+@import url("https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap");
+
+:root {
+  /* =========================================================================
+     GOVERNMENT OF INDIA / DEPARTMENT OF RURAL DEVELOPMENT DESIGN TOKENS
+     3D ULPIN Institutional Cadastral Geospatial Workstation
+     ========================================================================= */
+
+  /* Primary Institutional Palette */
+  --color-gov-blue: #162F6A;       /* Primary Government Blue */
+  --color-gov-blue-dark: #132A5F;  /* Dark Government Blue */
+  --color-gov-blue-sec: #214AAB;   /* Secondary Blue */
+  --color-gov-blue-light: #D2DFFF; /* Light Blue highlight (sparingly) */
+  --color-gov-white: #FFFFFF;      /* White */
+  --color-gov-grey-sec: #EBEAEA;   /* Section Grey */
+  --color-gov-text: #2C2C2C;       /* Dark Text */
+  --color-gov-black: #000000;      /* Black headings */
+  --color-gov-border: #D9DDE5;     /* Light Border */
+
+  /* Aliases for compatibility */
+  --color-navy: var(--color-gov-blue);
+  --color-navy-deep: var(--color-gov-blue-dark);
+  --color-navy-surface: var(--color-gov-blue);
+  --color-link: var(--color-gov-blue-sec);
+  --color-accent: #E0A93C;         /* Cadastral element gold */
+  --color-accent-soft: #F2C96B;
+
+  /* Functional Status Colors */
+  --color-success: #2E9E52;
+  --color-danger: #C0392B;
+  --color-warning: #B7791F;
+
+  /* Surfaces */
+  --color-surface-white: #FFFFFF;
+  --color-surface-light: #FFFFFF;
+  --color-surface-subtle: #EBEAEA;
+
+  /* Text Hierarchy */
+  --color-text-primary: #2C2C2C;
+  --color-text-secondary: #555555;
+  --color-text-muted: #777777;
+  --color-text-on-dark: #FFFFFF;
+  --color-heading: #162F6A;
+  --color-heading-dark: #000000;
+
+  /* Borders */
+  --color-border: #D9DDE5;
+  --color-border-dark: #132A5F;
+
+  /* 3D Building Materials */
+  --building-main: #586576;
+  --building-highlight: #6E7D91;
+  --building-edge: #8A99AC;
+  --building-selected: #E0A93C;
+
+  /* Mappings */
+  --void-black: var(--color-gov-blue-dark);
+  --deep-background: var(--color-gov-blue-dark);
+  --deep-panel: var(--color-gov-blue);
+  --elevated-panel: #1A377D;
+
+  --border-color: var(--color-border);
+  --border-strong: #162F6A;
+  --border-focus: var(--color-gov-blue);
+
+  --bg-app: #FFFFFF;
+}
+
+@media (max-width: 1024px) {
+  :root {
+    --nav-height: 58px;
+  }
+}
+
+@media (max-width: 768px) {
+  :root {
+    --nav-height: 54px;
+  }
+}
+
+/* =========================================================================
+   LIGHT MODE TOKENS
+   Intentionally designed for Registry, Tables, and Statutory Records
+   ========================================================================= */
+[data-theme="light"],
+.theme-light {
+  --void-black: var(--color-surface-light);
+  --deep-background: #EEF2F8;
+  --deep-panel: #FFFFFF;
+  --elevated-panel: #FFFFFF;
+  --spatial-teal: #162F6A;
+  --technical-teal: #162F6A;
+
+  --signal-cyan: var(--color-link);
+  --soft-cyan: #3B8BEA;
+  --survey-gold: var(--color-accent);
+  --mint: #4A6E68;
+
+  --state-verified: var(--color-success);
+  --state-review: var(--color-accent);
+  --state-selected: var(--color-link);
+  --state-ai: #6830C8;
+  --state-conflict: var(--color-danger);
+  --state-neutral: var(--color-text-muted);
+
+  --text-primary: var(--color-navy);
+  --text-secondary: #4A5168;
+  --text-muted: var(--color-text-muted);
+
+  --border-color: var(--color-border);
+  --border-strong: #C4D0E6;
+  --border-focus: var(--color-link);
+  --border-subtle: #EDF1F9;
+  --border-cyan: rgba(31, 122, 224, 0.35);
+  --border-glass: rgba(220, 227, 242, 0.65);
+
+  --bg-app: var(--color-surface-light);
+  --bg-base: #EEF2F8;
+  --bg-panel: #FFFFFF;
+  --bg-panel-elevated: #FFFFFF;
+  --bg-panel-glass: rgba(255, 255, 255, 0.95);
+  --bg-hover: rgba(22, 37, 92, 0.05);
+  --bg-active: rgba(31, 122, 224, 0.10);
+
+  --shadow-panel: 0 4px 16px rgba(16, 32, 64, 0.06);
+  --shadow-elevated: 0 10px 28px rgba(16, 32, 64, 0.10);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html, body, #root {
+  width: 100%;
+  height: 100%;
+  overflow: hidden;
+  background-color: #FFFFFF;
+  color: var(--text-primary);
+  font-family: var(--font-sans);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* Base Monospace formatting for Cadastral Identifiers */
+code, pre, .mono, .text-mono, [data-mono="true"] {
+  font-family: var(--font-mono);
+  letter-spacing: -0.01em;
+}
+
+/* Custom Scrollbars — Technical Precision */
+::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--void-black);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--spatial-teal);
+  border-radius: 3px;
+  border: 1px solid var(--deep-panel);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--signal-cyan);
+}
+
+[data-theme="light"] ::-webkit-scrollbar-track {
+  background: #E8EFEC;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb {
+  background: #A7C2BD;
+  border: 1px solid #FFFFFF;
+}
+
+[data-theme="light"] ::-webkit-scrollbar-thumb:hover {
+  background: #078CB0;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  * {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
